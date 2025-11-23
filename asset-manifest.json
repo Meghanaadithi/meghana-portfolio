@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/meghana-portfolio/static/css/main.871a9840.css",
+    "main.js": "/meghana-portfolio/static/js/main.9a4dfaec.js",
+    "index.html": "/meghana-portfolio/index.html",
+    "main.871a9840.css.map": "/meghana-portfolio/static/css/main.871a9840.css.map",
+    "main.9a4dfaec.js.map": "/meghana-portfolio/static/js/main.9a4dfaec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.871a9840.css",
+    "static/js/main.9a4dfaec.js"
+  ]
+}
