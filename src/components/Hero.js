@@ -1,48 +1,54 @@
 import React from "react";
-import { hero } from "../data";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { hero } from "../data";   // <-- FIXED (use hero, not about)
+import meghana from "../assets/meghana.png";
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="hero" id="top">
-      <div className="hero-content">
-        <p className="hero-pill">Software Engineer · Microservices · Cloud</p>
-        <h1>
-          {hero.name}
-          <span className="hero-accent">_</span>
-        </h1>
-        <h2>{hero.title}</h2>
-        <p className="hero-tagline">{hero.tagline}</p>
-        <p className="hero-location">{hero.location}</p>
+    <section id="hero" className="hero-container">
+      <div className="hero-left">
 
-        <div className="hero-actions">
-          <a href={hero.resumeLink} target="_blank" rel="noreferrer">
-            <button className="btn primary">View Resume</button>
-          </a>
-          <a href="#contact">
-            <button className="btn ghost">Contact Me</button>
-          </a>
-        </div>
+        <p className="hero-hey">Hey!!</p>
 
+        <h1 className="hero-name">{hero.name}</h1>
+
+        <p className="hero-tagline">
+          Building applications rooted in algorithmic thinking.
+        </p>
+
+        {/* ICONS + RESUME BUTTON */}
         <div className="hero-links">
-          {hero.linkedin && (
-            <a href={hero.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          )}
+          
+          {/* Email */}
+          <a href={`mailto:${hero.email}`} className="icon-btn">
+            <FaEnvelope />
+          </a>
 
-          {hero.github && (
-            <a href={hero.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          )}
+          {/* LinkedIn */}
+          <a href={hero.linkedin} className="icon-btn" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
 
-          {hero.leetcode && (
-            <a href={hero.leetcode} target="_blank" rel="noreferrer">
-              LeetCode
-            </a>
-          )}
+          {/* GitHub */}
+          <a href={hero.github} className="icon-btn" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+
+          {/* Resume Button */}
+          <a href={hero.resumeLink} target="_blank" rel="noopener noreferrer" className="resume-btn">
+            Resume
+          </a>
+
         </div>
       </div>
+
+      {/* PHOTO */}
+      <div className="hero-photo-wrapper">
+        <img src={meghana} alt="Meghana" className="hero-photo" />
+      </div>
+
     </section>
   );
-}
+};
+
+export default Hero;

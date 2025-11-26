@@ -8,11 +8,11 @@ export default function Navbar() {
 
   const items = [
     { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
+    { id: "education", label: "Education" },
     { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "certifications", label: "Certifications" },
-    { id: "contact", label: "Contact" }
   ];
 
   return (

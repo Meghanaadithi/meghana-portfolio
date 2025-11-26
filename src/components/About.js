@@ -1,9 +1,9 @@
 import React from "react";
 import { about } from "../data";
 
-export default function About() {
+const About = () => {
   return (
-    <section className="section" id="about">
+    <section id="about" className="about-section">
       <h3 className="section-title">About Me</h3>
 
       <div className="card about-card">
@@ -13,4 +13,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+};
+
+export default About;
