@@ -1,13 +1,40 @@
 {
   "files": {
-    "main.css": "/meghana-portfolio/static/css/main.871a9840.css",
-    "main.js": "/meghana-portfolio/static/js/main.9a4dfaec.js",
+    "main.css": "/meghana-portfolio/static/css/main.48884390.css",
+    "main.js": "/meghana-portfolio/static/js/main.3651ba8b.js",
+    "static/media/meghana.png": "/meghana-portfolio/static/media/meghana.906dd827f5a399ba05cc.png",
+    "static/media/vitap.png": "/meghana-portfolio/static/media/vitap.1914a5d74fe1daee4bcf.png",
+    "static/media/googleitsupport.png": "/meghana-portfolio/static/media/googleitsupport.9ca19dc64fa1a57db955.png",
+    "static/media/putty.png": "/meghana-portfolio/static/media/putty.505818d52104eacea946.png",
+    "static/media/css.png": "/meghana-portfolio/static/media/css.a0a7c7dc60b257f3021d.png",
+    "static/media/javascript.png": "/meghana-portfolio/static/media/javascript.cd882f326c8279cb459d.png",
+    "static/media/gmu.jpeg": "/meghana-portfolio/static/media/gmu.3c08ee276601c4082c49.jpeg",
+    "static/media/react.png": "/meghana-portfolio/static/media/react.809fed23bcdd686de66e.png",
+    "static/media/python.png": "/meghana-portfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
+    "static/media/pytest.png": "/meghana-portfolio/static/media/pytest.029739c8708bd0daa4c9.png",
+    "static/media/nodejs.png": "/meghana-portfolio/static/media/nodejs.007e99f68b718e476aba.png",
+    "static/media/azure.png": "/meghana-portfolio/static/media/azure.adec7ce7334bb6b4deb2.png",
+    "static/media/ericsson.png": "/meghana-portfolio/static/media/ericsson.a476e84833d8e15b92d6.png",
+    "static/media/junit.png": "/meghana-portfolio/static/media/junit.29996b6603d8efd03ec5.png",
+    "static/media/jenkins.svg": "/meghana-portfolio/static/media/jenkins.4da0b1b880863adf941c.svg",
+    "static/media/docker.png": "/meghana-portfolio/static/media/docker.c1f953a3ead577c05d04.png",
+    "static/media/aws.png": "/meghana-portfolio/static/media/aws.ebab6e40f3428c47e8ac.png",
+    "static/media/quarkus.png": "/meghana-portfolio/static/media/quarkus.2a590ef064f723a5959f.png",
+    "static/media/html.png": "/meghana-portfolio/static/media/html.6f9a8699c0ea083043f5.png",
+    "static/media/kubernetes.svg": "/meghana-portfolio/static/media/kubernetes.5361c558eaa073b46c2d.svg",
+    "static/media/pythoncert.webp": "/meghana-portfolio/static/media/pythoncert.e21ea701b276d63190cb.webp",
+    "static/media/apigateway.svg": "/meghana-portfolio/static/media/apigateway.bc59e70bc06032b8b838.svg",
+    "static/media/azurecosmo.svg": "/meghana-portfolio/static/media/azurecosmo.c1590a3ccc77903bbf43.svg",
+    "static/media/IAM.svg": "/meghana-portfolio/static/media/IAM.be58840137323d0c8b4d.svg",
+    "static/media/s3.svg": "/meghana-portfolio/static/media/s3.28024fe301a0e1e3883d.svg",
     "index.html": "/meghana-portfolio/index.html",
-    "main.871a9840.css.map": "/meghana-portfolio/static/css/main.871a9840.css.map",
-    "main.9a4dfaec.js.map": "/meghana-portfolio/static/js/main.9a4dfaec.js.map"
+    "static/media/mongodb.svg": "/meghana-portfolio/static/media/mongodb.bfa6cdd80f4a99232cad.svg",
+    "static/media/springboot.svg": "/meghana-portfolio/static/media/springboot.06648761f888d95c060a.svg",
+    "main.48884390.css.map": "/meghana-portfolio/static/css/main.48884390.css.map",
+    "main.3651ba8b.js.map": "/meghana-portfolio/static/js/main.3651ba8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.871a9840.css",
-    "static/js/main.9a4dfaec.js"
+    "static/css/main.48884390.css",
+    "static/js/main.3651ba8b.js"
   ]
 }
