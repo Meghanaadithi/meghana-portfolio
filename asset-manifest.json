@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/meghana-portfolio/static/css/main.48884390.css",
-    "main.js": "/meghana-portfolio/static/js/main.3651ba8b.js",
+    "main.js": "/meghana-portfolio/static/js/main.af0300af.js",
     "static/media/meghana.png": "/meghana-portfolio/static/media/meghana.906dd827f5a399ba05cc.png",
     "static/media/vitap.png": "/meghana-portfolio/static/media/vitap.1914a5d74fe1daee4bcf.png",
     "static/media/googleitsupport.png": "/meghana-portfolio/static/media/googleitsupport.9ca19dc64fa1a57db955.png",
@@ -31,10 +31,10 @@
     "static/media/mongodb.svg": "/meghana-portfolio/static/media/mongodb.bfa6cdd80f4a99232cad.svg",
     "static/media/springboot.svg": "/meghana-portfolio/static/media/springboot.06648761f888d95c060a.svg",
     "main.48884390.css.map": "/meghana-portfolio/static/css/main.48884390.css.map",
-    "main.3651ba8b.js.map": "/meghana-portfolio/static/js/main.3651ba8b.js.map"
+    "main.af0300af.js.map": "/meghana-portfolio/static/js/main.af0300af.js.map"
   },
   "entrypoints": [
     "static/css/main.48884390.css",
-    "static/js/main.3651ba8b.js"
+    "static/js/main.af0300af.js"
   ]
 }
