@@ -4,15 +4,15 @@ import "../App.css";
 const Projects = () => {
   const projects = [
     {
-      name: "Cloud Drive — Scalable Cloud Storage System",
-      tech: ["Node.js", "AWS EC2", "AWS S3", "IAM", "JavaScript"],
+      name: "Serverless Job Board Platform (AWS + React)",
+      tech: ["React.js", "Vite", "JavaScript", "React Router (HashRouter)", "TailwindCSS", "Framer Motion", "Node.js", "AWS Lambda", "AWS API Gateway", "AWS S3", "AWS IAM", "GitHub Pages", "Git & GitHub", "PostCSS", "ESLint"],
       description: [
-        "A scalable cloud storage platform enabling secure file uploads, downloads, and access management.",
-        "Designed server-side logic in Node.js with modular routing for clean separation of authentication and file operations.",
-        "Integrated AWS S3 for high-availability object storage and used IAM policies for secure permissions.",
-        "Optimized EC2 deployment architecture for reduced latency and faster file processing."
+        "Built a full-stack serverless Job Board platform using React, Vite, AWS Lambda, API Gateway, and S3, enabling job posting, candidate applications, and resume uploads.",
+        "Implemented file upload pipeline with S3 storage and secure access URLs; integrated Lambda functions for posting jobs, submitting applications, and retrieving admin dashboards.",
+        "Deployed the frontend to GitHub Pages with hash-based routing, Vite optimization, and automated gh-pages workflows.",
+        "Designed a clean, responsive UI using TailwindCSS + Framer Motion, improving user experience across job search, application, and admin views."
       ],
-      link: ""
+      link: "https://github.com/Meghanaadithi/job-board-frontend1"
     },
     {
       name: "Speak Notes — AI-Powered Speech Recognition App",
