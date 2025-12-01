@@ -1,61 +1,70 @@
 import React from "react";
 import "../App.css";
 
-const skills = [
-  { name: "HTML", file: "html.png" },
-  { name: "CSS", file: "css.png" },
-  { name: "JavaScript", file: "javascript.png" },
-  { name: "Java", file: "java.png" },
-  { name: "Python", file: "python.png" },
-  { name: "Node.js", file: "nodejs.png" },
-  { name: "React.js", file: "react.png" },
-  { name: "Spring Boot", file: "springboot.svg" },
-  { name: "Quarkus", file: "quarkus.png" },
-  { name: "JUnit", file: "junit.png" },
-  { name: "Pytest", file: "pytest.png" },
-  
-  // Cloud & DevOps
-  { name: "AWS", file: "aws.png" },
-  { name: "Azure", file: "azure.png" },
-  { name: "Azure Cosmos DB", file: "azurecosmo.svg" },
-  { name: "Docker", file: "docker.png" },
-  { name: "Kubernetes", file: "kubernetes.svg" },
-  { name: "Jenkins", file: "jenkins.svg" },
-  { name: "GitHub Actions", file: "github.png" },
-  { name: "Git", file: "git.png" },
-
-  // AWS Services
-{ name: "API Gateway", file: "apigateway.svg" },
-{ name: "Amazon S3", file: "s3.svg" },
-{ name: "EC2", file: "ec2.png" },
-{ name: "Lambda", file: "lambda.png" },
-{ name: "IAM", file: "IAM.svg" },
-{ name: "Google Cloud", file: "gcp.png" },
-
-
-  // Databases
-  { name: "MySQL", file: "mysql.png" },
-  { name: "MongoDB", file: "mongodb.svg" },
-
-  // Tools
-  { name: "PUTTY", file: "putty.png" },
-  { name: "JIRA", file: "jira.png" },
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    color: "blue",
+    items: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C++"],
+  },
+  {
+    title: "Frontend",
+    color: "purple",
+    items: ["React.js", "HTML", "CSS", "Taliwind.css"],
+  },
+  {
+    title: "Backend",
+    color: "green",
+    items: ["Node.js", "Spring Boot", "Quarkus", "MVC", "JUnit", "Pytest"],
+  },
+  {
+    title: "Databases",
+    color: "cyan",
+    items: ["MySQL", "MongoDB", "Azure Cosmos DB", "Oracle", "PostgreSQL", "AWS DynamoDB" ],
+  },
+  {
+    title: "Testing & QA Automation",
+    color: "yellow",
+    items: ["PUTTY", "JIRA", "Selenium WebDriver", "CI/CD Test Pipelines", "Page Object Model"],
+  },
+  {
+    title: "Cloud & DevOps",
+    color: "orange",
+    items: [
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitHub Actions",
+      "Git",
+      "API Gateway",
+      "Amazon S3",
+      "EC2",
+      "Lambda",
+      "IAM",
+      "Google Cloud",
+    ],
+  },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
-      <h3 className="section-title">Skills</h3>
+    <section id="skills" className="section skills-wrapper">
+      <h3 className="section-title">Technical Skills</h3>
 
-      <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <div className="skill-box" key={index}>
-            <img
-              src={require(`../assets/skills/${skill.file}`)}
-              alt={skill.name}
-              className="skill-icon"
-            />
-            <p className="skill-name">{skill.name}</p>
+      <div className="skills-category-grid">
+        {skillCategories.map((cat, index) => (
+          <div className={`skill-category-card ${cat.color}`} key={index}>
+            <h4 className="skill-category-title">{cat.title}</h4>
+
+            <div className="skill-pill-container">
+              {cat.items.map((item, i) => (
+                <span className="skill-pill" key={i}>
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

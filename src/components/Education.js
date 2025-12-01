@@ -1,6 +1,6 @@
 import React from "react";
 import gmuLogo from "../assets/education/gmu.jpeg";
-import vitapLogo from "../assets/education/vitap.png"; 
+import vitapLogo from "../assets/education/vitap.png";
 
 const Education = () => {
   return (
@@ -10,14 +10,18 @@ const Education = () => {
       {/* ================== GMU ================== */}
       <div className="edu-card">
         <div className="edu-left">
-        <img src={gmuLogo} alt="GMU Logo" className="edu-logo" />
+          <img src={gmuLogo} alt="GMU Logo" className="edu-logo" />
           <b className="edu-gpa">CGPA - 3.57 / 4.0</b>
-          <b className="edu-dates">Aug 2023 - May 2025</b>
         </div>
 
         <div className="edu-right">
           <h4 className="edu-school">George Mason University</h4>
           <p className="edu-degree">Master of Science in Computer Science</p>
+
+          {/* Meta row: Date + Location */}
+          <p className="edu-meta">
+            Aug 2023 – May 2025 • Fairfax, VA, USA
+          </p>
 
           <p className="edu-subtitle">Coursework:</p>
           <ul className="edu-list">
@@ -38,15 +42,19 @@ const Education = () => {
       {/* ================== VIT ================== */}
       <div className="edu-card">
         <div className="edu-left">
-        <img src={vitapLogo} alt="VIT-AP Logo" className="edu-logo" />
+          <img src={vitapLogo} alt="VIT-AP Logo" className="edu-logo" />
           <b className="edu-gpa">CGPA - 8.34 / 10</b>
-          <b className="edu-dates">2018 - 2022</b>
         </div>
 
         <div className="edu-right">
           <h4 className="edu-school">Vellore Institute of Technology — AP</h4>
           <p className="edu-degree">
             Bachelor of Technology in Computer Science and Engineering
+          </p>
+
+          {/* Meta row: Date + Location */}
+          <p className="edu-meta">
+            July 2018 – May 2022 • Amaravati, Andhra Pradesh, India
           </p>
 
           <p className="edu-subtitle">Coursework:</p>

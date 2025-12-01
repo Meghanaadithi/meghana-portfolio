@@ -1,11 +1,21 @@
 import React from "react";
 import "../App.css";
 
+import pic1 from "../assets/projects/pic1.png";
+import pic2 from "../assets/projects/pic2.png";
+import pic3 from "../assets/projects/pic3.png";
+
 const Projects = () => {
+  const projectImages = [pic1, pic2, pic3];
+
   const projects = [
     {
       name: "Serverless Job Board Platform (AWS + React)",
-      tech: ["React.js", "Vite", "JavaScript", "React Router (HashRouter)", "TailwindCSS", "Framer Motion", "Node.js", "AWS Lambda", "AWS API Gateway", "AWS S3", "AWS IAM", "GitHub Pages", "Git & GitHub", "PostCSS", "ESLint"],
+      tech: [
+        "React.js", "Vite", "JavaScript", "React Router (HashRouter)", "TailwindCSS", 
+        "Framer Motion", "Node.js", "AWS Lambda", "AWS API Gateway", "AWS S3", 
+        "AWS IAM", "GitHub Pages", "Git & GitHub", "PostCSS", "ESLint"
+      ],
       description: [
         "Built a full-stack serverless Job Board platform using React, Vite, AWS Lambda, API Gateway, and S3, enabling job posting, candidate applications, and resume uploads.",
         "Implemented file upload pipeline with S3 storage and secure access URLs; integrated Lambda functions for posting jobs, submitting applications, and retrieving admin dashboards.",
@@ -42,31 +52,50 @@ const Projects = () => {
     <section id="projects" className="section">
       <h3 className="section-title">Projects</h3>
 
-      {projects.map((p, index) => (
-        <div className="project-card-full" key={index}>
-
+      <div className="projects-grid">
+        {projects.map((p, index) => (
+          <div className="project-card-full" key={index}>
+  
+          <img 
+            src={projectImages[index]} 
+            alt={p.name} 
+            className="project-image"
+          />
+        
           <div className="project-details">
+            
+            {/* TITLE */}
             <h4 className="project-title">{p.name}</h4>
-
+        
+            {/* VIEW PROJECT moved directly under title */}
+            {p.link && (
+              <a 
+                className="project-link project-link-top" 
+                href={p.link} 
+                target="_blank" 
+                rel="noreferrer"
+              >
+                View Project →
+              </a>
+            )}
+        
+            {/* TECH STACK */}
             <div className="project-tech">
               {p.tech.map((t, i) => (
                 <span className="pill" key={i}>{t}</span>
               ))}
             </div>
-
+        
+            {/* DESCRIPTION */}
             {p.description.map((line, i) => (
               <p className="project-desc" key={i}>{line}</p>
             ))}
-
-            {p.link && (
-              <a className="project-link" href={p.link} target="_blank" rel="noreferrer">
-                View Project →
-              </a>
-            )}
+        
           </div>
+        </div>        
 
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

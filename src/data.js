@@ -19,7 +19,7 @@ export const hero = {
   // ABOUT SECTION
   // ============================
   export const about = [
-    "I’m a Software Engineer with 3 years of experience building and deploying scalable microservices using Java, Python, and Spring Boot, designing REST APIs, and working with relational and NoSQL databases.",
+    "I’m a Software Engineer with 2 years of experience building and deploying scalable microservices using Java, Python, and Spring Boot, designing REST APIs, and working with relational and NoSQL databases.",
     "I have hands-on experience deploying containerized workloads on AWS and Azure using Docker and Kubernetes, and automating releases with CI/CD pipelines.",
     "I’ve led a 10-member cross-functional team of developers, testers, and support engineers, improving system reliability and reducing production incidents.",
     "I am currently pursuing my Master of Science in Computer Science at George Mason University and enjoy working across the stack—from backend microservices to modern frontends."

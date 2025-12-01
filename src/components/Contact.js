@@ -1,31 +1,71 @@
-import React from "react";
-import { hero } from "../data";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../App.css";
 
-export default function Contact() {
+const Contact = () => {
+  const formRef = useRef(null);
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    emailjs
+      .sendForm(
+        "service_77fysgp",      // your SERVICE ID
+        "template_e789oli",     // your TEMPLATE ID
+        formRef.current,        // the <form> DOM element
+        "NypZTKavVqBh-Lakw"    // your PUBLIC KEY
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully! 🎉");
+          if (formRef.current) formRef.current.reset();
+        },
+        (error) => {
+          console.log("EMAILJS ERROR:", error);
+          setStatus("❌ Failed to send message. Try again.");
+        }
+      );
+  };
+
   return (
-    <section className="section" id="contact">
-      <h3 className="section-title">Contact</h3>
+    <section id="contact" className="section contact-section">
+      <h3 className="section-title">Connect With Me</h3>
 
-      <div className="card contact-card">
-        <p>I’m open to software engineering roles, backend roles, cloud roles, and internships.</p>
+      <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
+        <div className="form-row">
+          {/* IMPORTANT: these 'name' attributes MUST match the template variables */}
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+          />
 
-        <div className="contact-grid">
-          <div>
-            <h4>Email</h4>
-            <a href={`mailto:${hero.email}`}>{hero.email}</a>
-          </div>
-
-          <div>
-            <h4>Phone</h4>
-            <a href={`tel:${hero.phone}`}>{hero.phone}</a>
-          </div>
-
-          <div>
-            <h4>Location</h4>
-            <p>{hero.location}</p>
-          </div>
+          <input
+            type="email"
+            name="reply_to"
+            placeholder="Your Email"
+            required
+          />
         </div>
-      </div>
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+
+        <button type="submit" className="contact-btn">
+          Send Message
+        </button>
+
+        {status && <p className="contact-status">{status}</p>}
+      </form>
     </section>
   );
-}
+};
+
+export default Contact;

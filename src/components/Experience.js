@@ -8,7 +8,7 @@ const Experience = () => {
       <h2 className="section-title">Experience</h2>
 
       {/* ======================
-          ERICSSON (ONE COMPANY)
+          ERICSSON
       ======================= */}
       <div className="exp-company-card">
         <img src={ericssonLogo} alt="Ericsson" className="exp-company-logo" />
@@ -18,38 +18,58 @@ const Experience = () => {
           <p className="exp-company-location">Chennai, India</p>
           <p className="exp-company-dates">Jan 2022 – Jul 2023</p>
 
-          {/* =========== ROLE 1 ============= */}
-          <div className="exp-role-block">
-            <div className="exp-role-line"></div>
+          {/* ONE timeline with 2 dots (top = SWE, bottom = Intern) */}
+          <div className="ericsson-timeline">
+            {/* vertical line + dots */}
+            <div className="ericsson-line"></div>
+            <div className="ericsson-dot ericsson-dot-top"></div>
+            <div className="ericsson-dot ericsson-dot-bottom"></div>
 
-            <div>
+            {/* Software Engineer */}
+            <div className="ericsson-role">
               <h4 className="exp-role-title">Software Engineer</h4>
               <p className="exp-role-dates">Jun 2022 – Jul 2023 • Full-time</p>
-
               <ul className="exp-list">
-                <li>Engineered backend microservices using Java (Vert.x, Dropwizard, Quarkus, Jersey) with REST APIs.</li>
-                <li>Integrated Azure SQL & Cosmos DB using Hibernate to store operational metrics.</li>
+                <li>
+                  Engineered backend microservices using Java (Vert.x,
+                  Dropwizard, Quarkus, Jersey) with REST APIs.
+                </li>
+                <li>
+                  Integrated Azure SQL & Cosmos DB using Hibernate to store
+                  operational metrics.
+                </li>
                 <li>Built React.js dashboards for live KPI visualization.</li>
-                <li>Deployed microservices on AKS using Docker & ARM templates.</li>
-                <li>Implemented event-driven workflows using Kafka & RabbitMQ.</li>
-                <li>Automated CI/CD releases with Azure DevOps, Maven, Docker.</li>
+                <li>
+                  Deployed microservices on AKS using Docker & ARM templates.
+                </li>
+                <li>
+                  Implemented event-driven workflows using Kafka & RabbitMQ.
+                </li>
+                <li>
+                  Automated CI/CD releases with Azure DevOps, Maven, Docker.
+                </li>
               </ul>
             </div>
-          </div>
 
-          {/* =========== ROLE 2 ============= */}
-          <div className="exp-role-block">
-            <div className="exp-role-line"></div>
-
-            <div>
+            {/* Project Intern */}
+            <div className="ericsson-role">
               <h4 className="exp-role-title">Project Intern</h4>
               <p className="exp-role-dates">Jan 2022 – Jun 2022 • Internship</p>
-
               <ul className="exp-list">
-                <li>Configured & deployed ECMS modules across multi-region telecom clusters.</li>
-                <li>Used Java 11, Docker & Azure Resource Manager for provisioning.</li>
-                <li>Validated APIs via JUnit & Postman improving service reliability.</li>
-                <li>Supported Agile deployments with JIRA & sprint coordination.</li>
+                <li>
+                  Configured & deployed ECMS modules across multi-region telecom
+                  clusters.
+                </li>
+                <li>
+                  Used Java 11, Docker & Azure Resource Manager for provisioning.
+                </li>
+                <li>
+                  Validated APIs via JUnit & Postman improving service
+                  reliability.
+                </li>
+                <li>
+                  Supported Agile deployments with JIRA & sprint coordination.
+                </li>
               </ul>
             </div>
           </div>
@@ -69,7 +89,10 @@ const Experience = () => {
 
           <h4 className="exp-role-title">Frontend Developer</h4>
           <ul className="exp-list">
-            <li>Developed responsive UI for RoboLearn using HTML5, CSS3 & JavaScript.</li>
+            <li>
+              Developed responsive UI for RoboLearn using HTML5, CSS3 &
+              JavaScript.
+            </li>
             <li>Integrated MySQL + PHP backend for student workflows.</li>
             <li>Improved cross-device accessibility & UI performance.</li>
           </ul>
