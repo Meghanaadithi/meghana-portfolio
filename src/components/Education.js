@@ -7,74 +7,75 @@ const Education = () => {
     <section id="education" className="section">
       <h3 className="section-title">Education</h3>
 
-      {/* ================== GMU ================== */}
-      <div className="edu-card">
-        <div className="edu-left">
-          <img src={gmuLogo} alt="GMU Logo" className="edu-logo" />
-          <b className="edu-gpa">CGPA - 3.57 / 4.0</b>
+      <div className="timeline">
+
+        {/* ====================== GMU (LEFT) ====================== */}
+        <div className="timeline-row left">
+          <div className="timeline-card">
+
+            <h4 className="edu-school">George Mason University</h4>
+            <p className="edu-degree">Master of Science in Computer Science</p>
+            <p className="edu-meta">
+              📍 Fairfax, VA, USA  
+              <br />
+              📅 Aug 2023 – May 2025
+            </p>
+            <p className="edu-gpa">CGPA — 3.57 / 4.0</p>
+
+            {/* Coursework Tags */}
+            <div className="tags-container">
+              <span className="tag">Mathematical Foundations</span>
+              <span className="tag">Systems Programming</span>
+              <span className="tag">Software Modeling</span>
+              <span className="tag">WWW Engineering</span>
+              <span className="tag">Secure Programming</span>
+              <span className="tag">Advanced Algorithms</span>
+              <span className="tag">Database Systems</span>
+              <span className="tag">Artificial Intelligence</span>
+              <span className="tag">AI, Power & Society</span>
+              <span className="tag">Analysis of Algorithms</span>
+            </div>
+          </div>
+
+          <div className="timeline-dot"></div>
         </div>
 
-        <div className="edu-right">
-          <h4 className="edu-school">George Mason University</h4>
-          <p className="edu-degree">Master of Science in Computer Science</p>
+        {/* ====================== VIT (RIGHT) ====================== */}
+        <div className="timeline-row right">
+          <div className="timeline-dot"></div>
 
-          {/* Meta row: Date + Location */}
-          <p className="edu-meta">
-            Aug 2023 – May 2025 • Fairfax, VA, USA
-          </p>
+          <div className="timeline-card">
 
-          <p className="edu-subtitle">Coursework:</p>
-          <ul className="edu-list">
-            <li>Mathematical Foundations of CS</li>
-            <li>Computer Systems & Systems Programming</li>
-            <li>Software Modeling & Architectural Design</li>
-            <li>Software Engineering for the WWW</li>
-            <li>Secure Software Design & Programming</li>
-            <li>Advanced Algorithms</li>
-            <li>Database Systems</li>
-            <li>Intro to Artificial Intelligence</li>
-            <li>AI, Power & Society</li>
-            <li>Analysis of Algorithms I</li>
-          </ul>
+            <h4 className="edu-school">Vellore Institute of Technology — AP</h4>
+            <p className="edu-degree">
+              Bachelor of Technology in Computer Science & Engineering
+            </p>
+            <p className="edu-meta">
+              📍 Amaravati, Andhra Pradesh, India  
+              <br />
+              📅 July 2018 – May 2022
+            </p>
+            <p className="edu-gpa">CGPA — 8.34 / 10</p>
+
+            <div className="tags-container">
+              <span className="tag">Data Structures</span>
+              <span className="tag">OOP</span>
+              <span className="tag">Design & Analysis</span>
+              <span className="tag">DBMS</span>
+              <span className="tag">Operating Systems</span>
+              <span className="tag">Web Technologies</span>
+              <span className="tag">Computer Networks</span>
+              <span className="tag">Cloud Computing</span>
+              <span className="tag">AI</span>
+              <span className="tag">Cyber Security</span>
+              <span className="tag">Mobile Development</span>
+              <span className="tag">Digital Logic</span>
+              <span className="tag">Software Engineering</span>
+              <span className="tag">Python Programming</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* ================== VIT ================== */}
-      <div className="edu-card">
-        <div className="edu-left">
-          <img src={vitapLogo} alt="VIT-AP Logo" className="edu-logo" />
-          <b className="edu-gpa">CGPA - 8.34 / 10</b>
-        </div>
-
-        <div className="edu-right">
-          <h4 className="edu-school">Vellore Institute of Technology — AP</h4>
-          <p className="edu-degree">
-            Bachelor of Technology in Computer Science and Engineering
-          </p>
-
-          {/* Meta row: Date + Location */}
-          <p className="edu-meta">
-            July 2018 – May 2022 • Amaravati, Andhra Pradesh, India
-          </p>
-
-          <p className="edu-subtitle">Coursework:</p>
-          <ul className="edu-list">
-            <li>Data Structures & Algorithms</li>
-            <li>Object-Oriented Programming</li>
-            <li>Design & Analysis of Algorithms</li>
-            <li>Database Management Systems</li>
-            <li>Operating Systems</li>
-            <li>Web Technologies</li>
-            <li>Computer Networks</li>
-            <li>Cloud Computing</li>
-            <li>Artificial Intelligence</li>
-            <li>Cyber Security</li>
-            <li>Mobile Application Development</li>
-            <li>Digital Logic Design</li>
-            <li>Software Engineering</li>
-            <li>Python Programming</li>
-          </ul>
-        </div>
       </div>
     </section>
   );

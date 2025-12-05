@@ -657,114 +657,128 @@ section {
    EDUCATION
 ========================================================= */
 
-.education-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 6%;
+/* Timeline Main Wrapper */
+.timeline {
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
 }
 
-/* Slightly smaller title for education */
-.education-section .section-title {
-  font-size: 20px;
-  margin-bottom: 24px;
-  color: #111;
+/* Center Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #1e293b;
+  transform: translateX(-50%);
 }
 
-/* Education card */
-.edu-card {
+/* Timeline Left/Right Rows */
+.timeline-row {
+  position: relative;
   display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin: 80px 0;
+}
+
+/* Card should move further AWAY from center */
+.timeline-row.left {
   justify-content: flex-start;
-  align-items: center;
-  gap: 32px;
-  background: #fafafa;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 28px 32px;
-  margin-bottom: 26px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding-right: 80px; /* pushes card left */
 }
 
-/* Left side: logo / meta */
-.edu-left {
-  width: 180px;
-  min-width: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.timeline-row.right {
+  justify-content: flex-end;
+  padding-left: 80px; /* pushes card right */
 }
 
-.edu-logo {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 12px;
+/* Timeline Dot */
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #6366f1;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
-/* Right side */
-.edu-right {
-  flex: 1;
-  padding-right: 12px;
+/* Timeline Cards */
+.timeline-card {
+  width: 42%;
+  background: white;                    /* clean white card */
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.12);
+  border: 1px solid #e2e8f0;
 }
 
-.edu-school {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.edu-degree {
-  font-size: 16px;
+/* Dates (colored like screenshot) */
+.edu-date {
+  margin-bottom: 8px;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #444;
+  font-size: 1rem;
 }
 
+/* Emoji meta section FIX */
 .edu-meta {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 18px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #475569;
 }
 
-.course-title {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 10px;
+/* GPA */
+.edu-gpa {
+  margin: 8px 0 16px 0;
+  font-weight: bold;
 }
 
-.course-list {
+/* Coursework Tag Bubbles */
+.tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.course-pill {
-  background: #eee;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  color: #444;
+.tag {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 6px 14px;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  border: 1px solid #1e293b;
 }
 
-/* Education responsive */
-@media (max-width: 800px) {
-  .edu-card {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 24px;
+/* Mobile Fix */
+@media (max-width: 900px) {
+  .timeline-row,
+  .timeline-row.left,
+  .timeline-row.right {
+    justify-content: center;
+    padding: 0;
   }
 
-  .edu-left {
-    width: 100%;
-    align-items: center;
-    margin-bottom: 18px;
+  .timeline-card {
+    width: 90%;
   }
 
-  .edu-logo {
-    margin: auto;
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-dot {
+    left: 24px;
   }
 }
+
 
 /* =========================================================
    CONTACT SECTION

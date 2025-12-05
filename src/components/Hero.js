@@ -4,10 +4,10 @@ import { hero } from "../data";
 import meghana from "../assets/meghana.png";
 
 const rotatingText = [
-  "CS Grad",
   "Full-Stack Developer",
   "Cloud & DevOps Enthusiast",
-  "Problem Solver",
+  "Building Machines through alogorithmic thinking",
+  "CS Graduate",
 ];
 
 const Hero = () => {
