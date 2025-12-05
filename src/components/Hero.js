@@ -6,7 +6,7 @@ import meghana from "../assets/meghana.png";
 const rotatingText = [
   "Full-Stack Developer",
   "Cloud & DevOps Enthusiast",
-  "Building Machines through alogorithmic thinking",
+  "Building applications through alogorithmic thinking",
   "CS Graduate",
 ];
 
