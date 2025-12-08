@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "../App.css";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -12,10 +11,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_77fysgp",      // your SERVICE ID
-        "template_e789oli",     // your TEMPLATE ID
-        formRef.current,        // the <form> DOM element
-        "NypZTKavVqBh-Lakw"    // your PUBLIC KEY
+        "service_77fysgp",
+        "template_e789oli",
+        formRef.current,
+        "NypZTKavVqBh-Lakw"
       )
       .then(
         () => {
@@ -30,17 +29,38 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section contact-section">
-      <h3 className="section-title">Connect With Me</h3>
+    <section
+  id="contact"
+  className="max-w-3xl mx-auto pb-16 pt-4"
+>
+  <h3 className="text-2xl font-semibold mb-2">Connect With Me</h3>
 
-      <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
-        <div className="form-row">
-          {/* IMPORTANT: these 'name' attributes MUST match the template variables */}
+
+      <p className="mb-4 text-gray-600">
+    I’m always open to discussing new opportunities, collaborations, or exciting ideas.  
+    Whether it's a software engineering role, a tech project, or just a question? feel free to reach out!
+  </p>
+
+      <form
+        ref={formRef}
+        onSubmit={sendEmail}
+        className="
+          bg-[#fafafa] border border-gray-200 rounded-xl shadow-sm
+          p-8 flex flex-col
+        "
+      >
+        {/* ROW OF INPUTS */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-5">
           <input
             type="text"
             name="from_name"
             placeholder="Your Name"
             required
+            className="
+              flex-1 px-4 py-3 border border-gray-300 rounded-lg
+              text-[15px] outline-none transition
+              focus:border-gray-600
+            "
           />
 
           <input
@@ -48,21 +68,45 @@ const Contact = () => {
             name="reply_to"
             placeholder="Your Email"
             required
+            className="
+              flex-1 px-4 py-3 border border-gray-300 rounded-lg
+              text-[15px] outline-none transition
+              focus:border-gray-600
+            "
           />
         </div>
 
+        {/* MESSAGE BOX */}
         <textarea
           name="message"
           placeholder="Your Message"
           rows="5"
           required
+          className="
+            w-full px-4 py-3 border border-gray-300 rounded-lg
+            text-[15px] outline-none transition resize-none
+            focus:border-gray-600 mb-5
+          "
         ></textarea>
 
-        <button type="submit" className="contact-btn">
+        {/* BUTTON */}
+        <button
+          type="submit"
+          className="
+            w-full bg-black text-white py-3 rounded-lg
+            text-[16px] font-medium transition
+            hover:bg-gray-800 hover:-translate-y-0.5
+          "
+        >
           Send Message
         </button>
 
-        {status && <p className="contact-status">{status}</p>}
+        {/* STATUS MESSAGE */}
+        {status && (
+          <p className="text-center mt-4 text-[15px] text-gray-700">
+            {status}
+          </p>
+        )}
       </form>
     </section>
   );

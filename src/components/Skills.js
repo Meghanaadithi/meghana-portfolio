@@ -1,35 +1,53 @@
 import React from "react";
-import "../App.css";
 
 const skillCategories = [
   {
     title: "Programming Languages",
-    color: "blue",
+    color: "bg-indigo-50",
+    border: "border-indigo-200",
     items: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C++"],
   },
   {
     title: "Frontend",
-    color: "purple",
-    items: ["React.js", "HTML", "CSS", "Taliwind.css"],
+    color: "bg-purple-50",
+    border: "border-purple-200",
+    items: ["React.js", "HTML", "CSS", "Tailwind.css"],
   },
   {
     title: "Backend",
-    color: "green",
+    color: "bg-green-50",
+    border: "border-green-200",
     items: ["Node.js", "Spring Boot", "Quarkus", "MVC", "JUnit", "Pytest"],
   },
   {
     title: "Databases",
-    color: "cyan",
-    items: ["MySQL", "MongoDB", "Azure Cosmos DB", "Oracle", "PostgreSQL", "AWS DynamoDB" ],
+    color: "bg-cyan-50",
+    border: "border-cyan-200",
+    items: [
+      "MySQL",
+      "MongoDB",
+      "Azure Cosmos DB",
+      "Oracle",
+      "PostgreSQL",
+      "AWS DynamoDB",
+    ],
   },
   {
     title: "Testing & QA Automation",
-    color: "yellow",
-    items: ["PUTTY", "JIRA", "Selenium WebDriver", "CI/CD Test Pipelines", "Page Object Model"],
+    color: "bg-yellow-50",
+    border: "border-yellow-200",
+    items: [
+      "PUTTY",
+      "JIRA",
+      "Selenium WebDriver",
+      "CI/CD Test Pipelines",
+      "Page Object Model",
+    ],
   },
   {
     title: "Cloud & DevOps",
-    color: "orange",
+    color: "bg-orange-50",
+    border: "border-orange-200",
     items: [
       "AWS",
       "Azure",
@@ -50,17 +68,35 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section skills-wrapper">
-      <h3 className="section-title">Technical Skills</h3>
+    <section id="skills" className="max-w-[1200px] mx-auto px-6 pt-10 pb-20">
+      <h3 className="text-[22px] font-bold text-[#111] mb-8">
+        Technical Skills
+      </h3>
 
-      <div className="skills-category-grid">
+      {/* GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
         {skillCategories.map((cat, index) => (
-          <div className={`skill-category-card ${cat.color}`} key={index}>
-            <h4 className="skill-category-title">{cat.title}</h4>
+          <div
+            key={index}
+            className={`
+              ${cat.color} ${cat.border}
+              border rounded-xl shadow-sm p-6 transition
+              hover:-translate-y-1 hover:shadow-lg
+            `}
+          >
+            {/* Title */}
+            <h4 className="text-[18px] font-semibold mb-4">{cat.title}</h4>
 
-            <div className="skill-pill-container">
+            {/* Pills */}
+            <div className="flex flex-wrap gap-2">
               {cat.items.map((item, i) => (
-                <span className="skill-pill" key={i}>
+                <span
+                  key={i}
+                  className="
+                    bg-[#f1f4ff] text-gray-800 text-[13px] font-medium
+                    px-4 py-[6px] rounded-full
+                  "
+                >
                   {item}
                 </span>
               ))}

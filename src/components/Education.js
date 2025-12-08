@@ -1,77 +1,107 @@
 import React from "react";
-import gmuLogo from "../assets/education/gmu.jpeg";
-import vitapLogo from "../assets/education/vitap.png";
 
 const Education = () => {
   return (
-    <section id="education" className="section">
-      <h3 className="section-title">Education</h3>
+    <section id="education" className="max-w-[1200px] mx-auto px-6 py-16">
+      {/* Section Title */}
+      <h3 className="text-[22px] font-bold text-[#111] mb-10">Education</h3>
 
-      <div className="timeline">
+      {/* TIMELINE WRAPPER */}
+      <div className="relative mt-10">
+
+        {/* CENTER VERTICAL LINE */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[3px] h-full bg-slate-800" />
 
         {/* ====================== GMU (LEFT) ====================== */}
-        <div className="timeline-row left">
-          <div className="timeline-card">
+        <div className="relative w-full flex justify-start my-20">
+          {/* DOT */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3 w-[18px] h-[18px] bg-indigo-500 rounded-full z-10" />
 
-            <h4 className="edu-school">George Mason University</h4>
-            <p className="edu-degree">Master of Science in Computer Science</p>
-            <p className="edu-meta">
-              📍 Fairfax, VA, USA  
-              <br />
+          {/* CARD */}
+          <div className="w-[42%] bg-white rounded-xl border border-slate-300 shadow-lg p-7 ml-0 mr-auto">
+            <h4 className="text-lg font-semibold">George Mason University</h4>
+            <p className="text-[15px] font-medium text-gray-700">
+              Master of Science in Computer Science
+            </p>
+
+            <p className="text-sm text-slate-600 my-3 leading-relaxed">
+              📍 Fairfax, VA, USA <br />
               📅 Aug 2023 – May 2025
             </p>
-            <p className="edu-gpa">CGPA — 3.57 / 4.0</p>
 
-            {/* Coursework Tags */}
-            <div className="tags-container">
-              <span className="tag">Mathematical Foundations</span>
-              <span className="tag">Systems Programming</span>
-              <span className="tag">Software Modeling</span>
-              <span className="tag">WWW Engineering</span>
-              <span className="tag">Secure Programming</span>
-              <span className="tag">Advanced Algorithms</span>
-              <span className="tag">Database Systems</span>
-              <span className="tag">Artificial Intelligence</span>
-              <span className="tag">AI, Power & Society</span>
-              <span className="tag">Analysis of Algorithms</span>
+            <p className="font-semibold mb-4">CGPA — 3.57 / 4.0</p>
+
+            {/* TAGS */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Mathematical Foundations",
+                "Systems Programming",
+                "Software Modeling",
+                "WWW Engineering",
+                "Secure Programming",
+                "Advanced Algorithms",
+                "Database Systems",
+                "Artificial Intelligence",
+                "AI, Power & Society",
+                "Analysis of Algorithms",
+              ].map((course, idx) => (
+                <span
+                  key={idx}
+                  className="bg-slate-900 text-slate-300 border border-slate-800 px-4 py-[6px] rounded-full text-[0.82rem]"
+                >
+                  {course}
+                </span>
+              ))}
             </div>
           </div>
-
-          <div className="timeline-dot"></div>
         </div>
 
         {/* ====================== VIT (RIGHT) ====================== */}
-        <div className="timeline-row right">
-          <div className="timeline-dot"></div>
+        <div className="relative w-full flex justify-end my-20">
+          {/* DOT */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3 w-[18px] h-[18px] bg-indigo-500 rounded-full z-10" />
 
-          <div className="timeline-card">
-
-            <h4 className="edu-school">Vellore Institute of Technology — AP</h4>
-            <p className="edu-degree">
+          {/* CARD */}
+          <div className="w-[42%] bg-white rounded-xl border border-slate-300 shadow-lg p-7 ml-auto mr-0">
+            <h4 className="text-lg font-semibold">
+              Vellore Institute of Technology — AP
+            </h4>
+            <p className="text-[15px] font-medium text-gray-700">
               Bachelor of Technology in Computer Science & Engineering
             </p>
-            <p className="edu-meta">
-              📍 Amaravati, Andhra Pradesh, India  
-              <br />
+
+            <p className="text-sm text-slate-600 my-3 leading-relaxed">
+              📍 Amaravati, Andhra Pradesh, India <br />
               📅 July 2018 – May 2022
             </p>
-            <p className="edu-gpa">CGPA — 8.34 / 10</p>
 
-            <div className="tags-container">
-              <span className="tag">Data Structures</span>
-              <span className="tag">OOP</span>
-              <span className="tag">Design & Analysis</span>
-              <span className="tag">DBMS</span>
-              <span className="tag">Operating Systems</span>
-              <span className="tag">Web Technologies</span>
-              <span className="tag">Computer Networks</span>
-              <span className="tag">Cloud Computing</span>
-              <span className="tag">AI</span>
-              <span className="tag">Cyber Security</span>
-              <span className="tag">Mobile Development</span>
-              <span className="tag">Digital Logic</span>
-              <span className="tag">Software Engineering</span>
-              <span className="tag">Python Programming</span>
+            <p className="font-semibold mb-4">CGPA — 8.34 / 10</p>
+
+            {/* TAGS */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Data Structures",
+                "OOP",
+                "Design & Analysis",
+                "DBMS",
+                "Operating Systems",
+                "Web Technologies",
+                "Computer Networks",
+                "Cloud Computing",
+                "AI",
+                "Cyber Security",
+                "Mobile Development",
+                "Digital Logic",
+                "Software Engineering",
+                "Python Programming",
+              ].map((course, idx) => (
+                <span
+                  key={idx}
+                  className="bg-slate-900 text-slate-300 border border-slate-800 px-4 py-[6px] rounded-full text-[0.82rem]"
+                >
+                  {course}
+                </span>
+              ))}
             </div>
           </div>
         </div>

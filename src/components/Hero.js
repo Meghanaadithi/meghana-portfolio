@@ -18,25 +18,20 @@ const Hero = () => {
 
   useEffect(() => {
     const current = rotatingText[index];
-
-    let typingSpeed = isDeleting ? 40 : 90; // speed controls
+    let typingSpeed = isDeleting ? 40 : 90;
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing forward
         setDisplayText(current.substring(0, charIndex + 1));
         setCharIndex(charIndex + 1);
 
-        // When done typing → pause → start deleting
         if (charIndex === current.length) {
           setTimeout(() => setIsDeleting(true), 800);
         }
       } else {
-        // Deleting backwards
         setDisplayText(current.substring(0, charIndex - 1));
         setCharIndex(charIndex - 1);
 
-        // Fully deleted → move to next word
         if (charIndex === 0) {
           setIsDeleting(false);
           setIndex((prev) => (prev + 1) % rotatingText.length);
@@ -48,28 +43,60 @@ const Hero = () => {
   }, [charIndex, isDeleting, index]);
 
   return (
-    <section id="hero" className="hero-container">
-      <div className="hero-left">
-        <p className="hero-hey">Hey!! I'm</p>
+    <section
+      id="hero"
+      className="
+        max-w-[1200px] mx-auto px-6 py-20
+        flex justify-between items-center gap-10
+        lg:flex-row flex-col-reverse text-left
+      "
+    >
+      {/* LEFT SIDE */}
+      <div className="flex-1">
+        <p className="text-[20px] text-gray-600 mb-2">Hey!! I'm</p>
 
-        <h1 className="hero-name">{hero.name}</h1>
+        <h1 className="text-[42px] font-bold mb-3">{hero.name}</h1>
 
-        {/* 🔥 Typewriter animation text */}
-        <p className="hero-typewriter">
+        {/* Typewriter */}
+        <p className="text-[22px] text-gray-700 mb-6 h-[30px] overflow-hidden whitespace-nowrap">
           {displayText}
-          <span className="cursor">|</span>
+          <span className="inline-block ml-1 w-[3px] animate-pulse">|</span>
         </p>
 
-        <div className="hero-links">
-          <a href={`mailto:${hero.email}`} className="icon-btn">
+        {/* ICONS + RESUME BUTTON */}
+        <div className="flex items-center gap-4">
+          <a
+            href={`mailto:${hero.email}`}
+            className="
+              w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 
+              bg-gray-100 text-gray-700 text-lg transition
+              hover:bg-white hover:-translate-y-[3px] hover:shadow-md
+            "
+          >
             <FaEnvelope />
           </a>
 
-          <a href={hero.linkedin} className="icon-btn" target="_blank">
+          <a
+            href={hero.linkedin}
+            className="
+              w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 
+              bg-gray-100 text-gray-700 text-lg transition
+              hover:bg-white hover:-translate-y-[3px] hover:shadow-md
+            "
+            target="_blank"
+          >
             <FaLinkedin />
           </a>
 
-          <a href={hero.github} className="icon-btn" target="_blank">
+          <a
+            href={hero.github}
+            className="
+              w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 
+              bg-gray-100 text-gray-700 text-lg transition
+              hover:bg-white hover:-translate-y-[3px] hover:shadow-md
+            "
+            target="_blank"
+          >
             <FaGithub />
           </a>
 
@@ -77,15 +104,27 @@ const Hero = () => {
             href={hero.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="resume-btn"
+            className="
+              px-4 py-2 bg-black text-white rounded-md text-[15px]
+              hover:bg-gray-800 transition ml-2
+            "
           >
             Resume
           </a>
         </div>
       </div>
 
-      <div className="hero-photo-wrapper">
-        <img src={meghana} alt="Meghana" className="hero-photo" />
+      {/* RIGHT SIDE – PHOTO */}
+      <div className="flex-1 flex justify-center">
+        <img
+          src={meghana}
+          alt="Meghana"
+          className="
+            w-[260px] h-[260px] object-cover rounded-xl border border-gray-300
+            lg:w-[260px] lg:h-[260px]
+            md:w-[230px] md:h-[230px]
+          "
+        />
       </div>
     </section>
   );

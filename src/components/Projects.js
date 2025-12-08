@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 import pic1 from "../assets/projects/pic1.png";
 import pic2 from "../assets/projects/pic2.png";
@@ -10,17 +9,18 @@ const Projects = () => {
 
   const projects = [
     {
-      name: "Serverless Job Board Platform (AWS + React)",
+      name: "Serverless Job Board Platform (AWS + React + Tailwind.css)",
       tech: [
-        "React.js", "Vite", "JavaScript", "React Router (HashRouter)", "TailwindCSS", 
-        "Framer Motion", "Node.js", "AWS Lambda", "AWS API Gateway", "AWS S3", 
-        "AWS IAM", "GitHub Pages", "Git & GitHub", "PostCSS", "ESLint"
+        "React.js", "Vite", "JavaScript", "React Router (HashRouter)",
+        "TailwindCSS", "Framer Motion", "Node.js", "AWS Lambda",
+        "AWS API Gateway", "AWS S3", "AWS IAM", "GitHub Pages",
+        "Git & GitHub", "PostCSS", "ESLint"
       ],
       description: [
         "Built a full-stack serverless Job Board platform using React, Vite, AWS Lambda, API Gateway, and S3, enabling job posting, candidate applications, and resume uploads.",
-        "Implemented file upload pipeline with S3 storage and secure access URLs; integrated Lambda functions for posting jobs, submitting applications, and retrieving admin dashboards.",
-        "Deployed the frontend to GitHub Pages with hash-based routing, Vite optimization, and automated gh-pages workflows.",
-        "Designed a clean, responsive UI using TailwindCSS + Framer Motion, improving user experience across job search, application, and admin views."
+        "Implemented file upload pipeline with S3 storage, secure access URLs, and Lambda integrations.",
+        "Deployed the frontend to GitHub Pages with hash-based routing + automated gh-pages workflows.",
+        "Designed a clean, responsive UI using TailwindCSS + Framer Motion."
       ],
       link: "https://github.com/Meghanaadithi/job-board-frontend1"
     },
@@ -28,10 +28,10 @@ const Projects = () => {
       name: "Speak Notes — AI-Powered Speech Recognition App",
       tech: ["Python", "Tkinter", "Google Speech API", "PyAudio"],
       description: [
-        "A desktop voice-to-text application built to assist productivity through hands-free note taking.",
-        "Implemented continuous speech recognition using Google Speech API with offline fallback using PyAudio.",
-        "Designed a clean Tkinter UI allowing users to save, edit, and organize generated notes.",
-        "Improved transcription accuracy and reduced noise interference through audio preprocessing."
+        "A desktop voice-to-text application for hands-free note taking.",
+        "Implemented continuous speech recognition using Google Speech API with PyAudio fallback.",
+        "Designed a clean Tkinter UI for saving, editing, and organizing notes.",
+        "Improved transcription accuracy using noise-reduction preprocessing."
       ],
       link: ""
     },
@@ -39,61 +39,77 @@ const Projects = () => {
       name: "Personal Portfolio Website",
       tech: ["React.js", "JavaScript", "HTML", "CSS", "GitHub Pages"],
       description: [
-        "Designed and developed a modern, responsive personal portfolio to showcase experience, education, and projects.",
-        "Built reusable React components for skills, education, and experience with a modular architecture.",
-        "Implemented polished UI interactions and a scalable folder structure for easy future updates.",
-        "Deployed using GitHub Pages with automated builds for seamless version updates."
+        "Designed a modern, responsive portfolio to showcase experience and projects.",
+        "Built reusable React components with modular architecture.",
+        "Created polished UI interactions and clean page structure.",
+        "Deployed using GitHub Pages with automated builds.",
+        "Designed a clean, responsive UI using TailwindCSS + Framer Motion."
       ],
       link: "https://meghanaadithi.github.io/meghana-portfolio/"
     }
   ];
 
   return (
-    <section id="projects" className="section">
-      <h3 className="section-title">Projects</h3>
+    <section id="projects" className="max-w-[1200px] mx-auto px-6 py-16">
+      <h3 className="text-[22px] font-bold text-[#111] mb-8">Projects</h3>
 
-      <div className="projects-grid">
+      {/* GRID */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, index) => (
-          <div className="project-card-full" key={index}>
-  
-          <img 
-            src={projectImages[index]} 
-            alt={p.name} 
-            className="project-image"
-          />
-        
-          <div className="project-details">
-            
-            {/* TITLE */}
-            <h4 className="project-title">{p.name}</h4>
-        
-            {/* VIEW PROJECT moved directly under title */}
+          <div
+            key={index}
+            className="
+              w-full bg-[#fafafa] border border-gray-200 rounded-xl
+              p-6 shadow-sm hover:shadow-lg transition
+              flex flex-col
+            "
+          >
+            {/* Image */}
+            <img
+              src={projectImages[index]}
+              alt={p.name}
+              className="w-full h-[200px] object-cover rounded-lg mb-4"
+            />
+
+            {/* Title */}
+            <h4 className="text-[18px] font-semibold mb-1">{p.name}</h4>
+
+            {/* Link */}
             {p.link && (
-              <a 
-                className="project-link project-link-top" 
-                href={p.link} 
-                target="_blank" 
+              <a
+                className="text-blue-600 font-semibold mb-3 inline-block hover:underline"
+                href={p.link}
+                target="_blank"
                 rel="noreferrer"
               >
                 View Project →
               </a>
             )}
-        
-            {/* TECH STACK */}
-            <div className="project-tech">
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-4">
               {p.tech.map((t, i) => (
-                <span className="pill" key={i}>{t}</span>
+                <span
+                  key={i}
+                  className="
+                    bg-gray-200 text-gray-700 text-[13px]
+                    px-3 py-1 rounded-full
+                  "
+                >
+                  {t}
+                </span>
               ))}
             </div>
-        
-            {/* DESCRIPTION */}
-            {p.description.map((line, i) => (
-              <p className="project-desc" key={i}>{line}</p>
-            ))}
-        
-          </div>
-        </div>        
 
+            {/* Description */}
+            <div className="mt-auto">
+              {p.description.map((line, i) => (
+                <p key={i} className="text-gray-700 text-[14px] leading-relaxed mb-2">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>
