@@ -7,9 +7,43 @@ const Experience = () => {
     <section id="experience" className="section">
       <h2 className="section-title">Experience</h2>
 
+
       {/* ======================
+          ROBO SLOG
+      ======================= */}
+      <div className="exp-company-card">
+        <img src={roboslogLogo} alt="Robo Slog" className="exp-company-logo" />
+
+        <div className="exp-company-right">
+          <h3 className="exp-company-name">NVIDIA </h3>
+          <p className="exp-company-location">Remote, US</p>
+          <p className="exp-company-dates">Jan 2025 - present</p>
+
+          <h4 className="exp-role-title">Software Engineer</h4>
+          <ul className="exp-list">
+            <li>
+            Defined backend microservices with Java 11, Spring Boot, and Spring Cloud, decomposing features into modular services for authentication, asset handling, and model training, which strengthened platform scalability and reliability.
+            </li>
+            <li> Implemented REST APIs and event-driven workflows with Apache Kafka to synchronize collaboration in Omniverse Cloud and orchestrate training jobs in NeMo AI Suite, enhancing responsiveness across distributed systems.</li>
+            <li> Developed containerized services with Docker and Kubernetes while automating CI/CD pipelines in Jenkins and GitHub Actions, which streamlined releases and raised deployment frequency by 60%..</li>
+            <li>
+            Optimized cloud integration with AWS S3, RDS, DynamoDB, Lambda, and SageMaker, ensuring resilient storage and efficient training orchestration, which redesigned infrastructure overhead by 30%.
+            </li>
+            <li>
+            Conducted rigorous validation using JUnit, Mockito, and Postman to increase code coverage and quality, while fostering collaboration with product and QA teams to align deliverables with evolving project requirements.
+            </li>
+            <li>
+            Built APIs and orchestration services in Java 11 on AWS to accelerate file retrieval and training workflows, which Upgraded collaboration efficiency by 40% and Decreased job scheduling delays by 50%.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+       {/* ======================
           ERICSSON
       ======================= */}
+
+
       <div className="exp-company-card">
         <img src={ericssonLogo} alt="Ericsson" className="exp-company-logo" />
 
