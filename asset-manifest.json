@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/meghana-portfolio/static/css/main.10674f2b.css",
-    "main.js": "/meghana-portfolio/static/js/main.e704c876.js",
+    "main.css": "/meghana-portfolio/static/css/main.3be18319.css",
+    "main.js": "/meghana-portfolio/static/js/main.0e83261e.js",
     "static/media/meghana.png": "/meghana-portfolio/static/media/meghana.906dd827f5a399ba05cc.png",
     "static/media/pic3.png": "/meghana-portfolio/static/media/pic3.00ff6d57704d0637ea73.png",
     "static/media/pic1.png": "/meghana-portfolio/static/media/pic1.b69a51d4e736c644246f.png",
     "static/media/pic2.png": "/meghana-portfolio/static/media/pic2.bc14385c91f3cbad61c4.png",
-    "static/media/vitap.png": "/meghana-portfolio/static/media/vitap.1914a5d74fe1daee4bcf.png",
     "static/media/googleitsupport.png": "/meghana-portfolio/static/media/googleitsupport.9ca19dc64fa1a57db955.png",
-    "static/media/gmu.jpeg": "/meghana-portfolio/static/media/gmu.3c08ee276601c4082c49.jpeg",
+    "static/media/nvidia.png": "/meghana-portfolio/static/media/nvidia.05f5ccebcabdbcb26c7e.png",
     "static/media/ericsson.png": "/meghana-portfolio/static/media/ericsson.a476e84833d8e15b92d6.png",
     "static/media/pythoncert.webp": "/meghana-portfolio/static/media/pythoncert.e21ea701b276d63190cb.webp",
     "index.html": "/meghana-portfolio/index.html",
-    "main.10674f2b.css.map": "/meghana-portfolio/static/css/main.10674f2b.css.map",
-    "main.e704c876.js.map": "/meghana-portfolio/static/js/main.e704c876.js.map"
+    "main.3be18319.css.map": "/meghana-portfolio/static/css/main.3be18319.css.map",
+    "main.0e83261e.js.map": "/meghana-portfolio/static/js/main.0e83261e.js.map"
   },
   "entrypoints": [
-    "static/css/main.10674f2b.css",
-    "static/js/main.e704c876.js"
+    "static/css/main.3be18319.css",
+    "static/js/main.0e83261e.js"
   ]
 }
