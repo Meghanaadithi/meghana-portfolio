@@ -22,7 +22,8 @@ const Projects = () => {
         "Deployed the frontend to GitHub Pages with hash-based routing + automated gh-pages workflows.",
         "Designed a clean, responsive UI using TailwindCSS + Framer Motion."
       ],
-      link: "https://github.com/Meghanaadithi/job-board-frontend1"
+      Github: "https://github.com/Meghanaadithi/job-board-frontend1",
+       link: "https://meghanaadithi.github.io/job-board-frontend/"
     },
     {
       name: "AI HR Copilot — Intelligent Resume & HR Assistant",
@@ -33,6 +34,7 @@ const Projects = () => {
         "Implemented prompt orchestration to generate role-specific feedback, skill gap analysis, and improvement recommendations.",
         "Designed the system with a human-in-the-loop approach to ensure AI outputs remain advisory and explainable."
       ],
+      Github: "https://github.com/Meghanaadithi/ai-hr-resume-copilot",
       link: "https://ai-hr-resume-copilot-fzzk9uwgpfwupje6w4j88d.streamlit.app"
     },
     
@@ -46,6 +48,7 @@ const Projects = () => {
         "Deployed using GitHub Pages with automated builds.",
         "Designed a clean, responsive UI using TailwindCSS + Framer Motion."
       ],
+      Github: "https://github.com/Meghanaadithi/meghana-portfolio",
       link: "https://meghanaadithi.github.io/meghana-portfolio/"
     }
   ];
