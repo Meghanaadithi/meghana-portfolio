@@ -37,17 +37,6 @@ const Projects = () => {
     },
     
     {
-      name: "Speak Notes — AI-Powered Speech Recognition App",
-      tech: ["Python", "Tkinter", "Google Speech API", "PyAudio"],
-      description: [
-        "A desktop voice-to-text application for hands-free note taking.",
-        "Implemented continuous speech recognition using Google Speech API with PyAudio fallback.",
-        "Designed a clean Tkinter UI for saving, editing, and organizing notes.",
-        "Improved transcription accuracy using noise-reduction preprocessing."
-      ],
-      link: ""
-    },
-    {
       name: "Personal Portfolio Website",
       tech: ["React.js", "JavaScript", "HTML", "CSS", "GitHub Pages"],
       description: [
