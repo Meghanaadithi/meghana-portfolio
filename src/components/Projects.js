@@ -25,6 +25,18 @@ const Projects = () => {
       link: "https://github.com/Meghanaadithi/job-board-frontend1"
     },
     {
+      name: "AI HR Copilot — Intelligent Resume & HR Assistant",
+      tech: ["Python", "Streamlit", "LLMs", "Prompt Engineering", "REST APIs"],
+      description: [
+        "An AI-powered HR copilot that assists with resume analysis, role fit evaluation, and HR decision support.",
+        "Built an interactive Streamlit application enabling users to upload resumes and receive structured, AI-generated insights.",
+        "Implemented prompt orchestration to generate role-specific feedback, skill gap analysis, and improvement recommendations.",
+        "Designed the system with a human-in-the-loop approach to ensure AI outputs remain advisory and explainable."
+      ],
+      link: "https://ai-hr-resume-copilot-fzzk9uwgpfwupje6w4j88d.streamlit.app"
+    },
+    
+    {
       name: "Speak Notes — AI-Powered Speech Recognition App",
       tech: ["Python", "Tkinter", "Google Speech API", "PyAudio"],
       description: [
