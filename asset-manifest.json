@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/meghana-portfolio/static/css/main.3be18319.css",
-    "main.js": "/meghana-portfolio/static/js/main.0e83261e.js",
+    "main.js": "/meghana-portfolio/static/js/main.d6b923b3.js",
     "static/media/meghana.png": "/meghana-portfolio/static/media/meghana.906dd827f5a399ba05cc.png",
     "static/media/pic3.png": "/meghana-portfolio/static/media/pic3.00ff6d57704d0637ea73.png",
     "static/media/pic1.png": "/meghana-portfolio/static/media/pic1.b69a51d4e736c644246f.png",
@@ -12,10 +12,10 @@
     "static/media/pythoncert.webp": "/meghana-portfolio/static/media/pythoncert.e21ea701b276d63190cb.webp",
     "index.html": "/meghana-portfolio/index.html",
     "main.3be18319.css.map": "/meghana-portfolio/static/css/main.3be18319.css.map",
-    "main.0e83261e.js.map": "/meghana-portfolio/static/js/main.0e83261e.js.map"
+    "main.d6b923b3.js.map": "/meghana-portfolio/static/js/main.d6b923b3.js.map"
   },
   "entrypoints": [
     "static/css/main.3be18319.css",
-    "static/js/main.0e83261e.js"
+    "static/js/main.d6b923b3.js"
   ]
 }
