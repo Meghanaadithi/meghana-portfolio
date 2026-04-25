@@ -1,5 +1,4 @@
 import React from "react";
-import nvidiaLogo from "../assets/experience/nvidia.png";
 import ericssonLogo from "../assets/experience/ericsson.png";
 import roboslogLogo from "../assets/experience/roboslog.jpeg";
 
