@@ -8,48 +8,6 @@ const Experience = () => {
     <section id="experience" className="max-w-[1200px] mx-auto px-6 py-16">
       <h2 className="text-[22px] font-bold text-[#111] mb-8">Experience</h2>
 
-      {/* ====================== NVIDIA ====================== */}
-      <div className="flex gap-7 bg-[#fafafa] border border-gray-200 rounded-xl p-7 mb-10">
-        <img
-          src={nvidiaLogo}
-          alt="NVIDIA"
-          className="w-[90px] min-w-[90px] object-contain"
-        />
-
-        <div>
-          <h3 className="text-xl font-bold">NVIDIA</h3>
-          <p className="text-sm text-gray-600">Remote, US</p>
-          <p className="text-sm text-gray-600 mb-4">Jan 2025 – Present</p>
-
-          <h4 className="text-[16px] font-semibold mb-2">Software Engineer</h4>
-          <ul className="list-disc ml-5 space-y-2 text-gray-700">
-            <li>
-              Defined backend microservices with Java 11, Spring Boot, Spring
-              Cloud… strengthening platform scalability.
-            </li>
-            <li>
-              Implemented REST APIs + event-driven workflows with Kafka for
-              Omniverse Cloud & NeMo AI Suite.
-            </li>
-            <li>
-              Automated CI/CD pipelines (Docker, Kubernetes, Jenkins, GitHub
-              Actions) improving deploy frequency by 60%.
-            </li>
-            <li>
-              Optimized AWS integrations (S3, RDS, DynamoDB, Lambda, SageMaker)
-              reducing infra overhead by 30%.
-            </li>
-            <li>
-              Conducted validation using JUnit, Mockito, Postman increasing code
-              quality and team alignment.
-            </li>
-            <li>
-              Built AWS-based orchestration services accelerating training
-              workflows by 40% & reducing job delays 50%.
-            </li>
-          </ul>
-        </div>
-      </div>
 
       {/* ====================== ERICSSON ====================== */}
       <div className="flex gap-7 bg-[#fafafa] border border-gray-200 rounded-xl p-7 mb-10">
